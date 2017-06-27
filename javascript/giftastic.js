@@ -87,8 +87,11 @@ function displayGif() {
 		}
 
 	})
+$('.new-teams').click(displayGif);
 
 }
+
+
 
 // function for on click event for starting and stopping gifs
 
