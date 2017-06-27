@@ -26,16 +26,7 @@ function renderButtons() {
 	
 }
 
-// $(document).on('click', '.gif-btn', function() {
-
-//   var term = $(this).attr('data-topic');
-
-//   searchQuery = term.split(' ').join('+');
-
-//   displayGif();
-// });
-
-// button for adding the user input team names
+// button for adding the user input team names 
 $("#add-team").on("click", function(event){
 
 		event.preventDefault();
@@ -47,7 +38,10 @@ $("#add-team").on("click", function(event){
 		renderButtons();
 });
 
-function displayGif() {
+$(document).on('click', '.new-teams', function() {
+
+// $('.new-teams').on('click', function() {
+	console.log("hello");
 
 	// create var to hold my search topic
 	var team = $(this).attr("data-name");
@@ -87,15 +81,14 @@ function displayGif() {
 		}
 
 	})
-$('.new-teams').click(displayGif);
-
-}
+	
+})
 
 
 
 // function for on click event for starting and stopping gifs
 
-$(document).on('click', '.gif-img', function() {
+$(document).on('click', '.gif', function() {
 
   var state = $(this).attr('data-state');
 
@@ -115,7 +108,6 @@ $(document).on('click', '.gif-img', function() {
 });
 
 
-displayGif();
 
 
 
